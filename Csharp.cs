@@ -8,9 +8,9 @@ namespace BlankSlate.Functions;
 
 public class McpTools(ILogger<McpTools> logger)
 {
-    [Function(nameof(GetBestPractices))]
-    public string GetBestPractices(
-        [McpToolTrigger("get_csharp_best_practices", "Retrieves C# best practices")]
+    [Function(nameof(GetCsharpBestPractices))]
+    public string GetCsharpBestPractices(
+        [McpToolTrigger("get_csharp_best_practices", "Retrieves best practices for the C# programming language")]
             ToolInvocationContext toolContext)
     {
         logger.LogInformation("Serving C# best practices via MCP tool {ToolName}", "get_csharp_best_practices");

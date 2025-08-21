@@ -190,7 +190,7 @@ _pkginfo.txt
 ClientBin/
 ~$*
 *~
-*.dbmdl
+//!dbmdl
 *.dbproj.schemaview
 *.jfm
 *.pfx
@@ -263,5 +263,32 @@ paket-files/
 __pycache__/
 *.pyc
 
-# Azurite
+# Azurite (local Azure Storage emulator)
+.azurite/
+**/.azurite/**
+azurite/
+**/azurite/**
+
+# Legacy Azurite data folders
+__blobstorage__/
+__queuestorage__/
+__tablestorage__/
+**/__blobstorage__/**
+**/__queuestorage__/**
+**/__tablestorage__/**
+
+# New Azurite database folders
+__azurite_db_blob__/
+__azurite_db_queue__/
+__azurite_db_table__/
+**/__azurite_db_blob__/**
+**/__azurite_db_queue__/**
+**/__azurite_db_table__/**
+
+# Azurite database files (JSON + WAL/SHM)
+__azurite_db_*.json
+__azurite_db_*.json-*
+__azurite_db_*.json.*
+
+# Generic fallback
 **/__azurite*
