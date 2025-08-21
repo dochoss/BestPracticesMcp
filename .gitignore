@@ -269,7 +269,7 @@ __pycache__/
 azurite/
 **/azurite/**
 
-# Legacy Azurite data folders
+# Legacy Azurite data folders (double-underscore variants)
 __blobstorage__/
 __queuestorage__/
 __tablestorage__/
@@ -277,7 +277,15 @@ __tablestorage__/
 **/__queuestorage__/**
 **/__tablestorage__/**
 
-# New Azurite database folders
+# Single-underscore variants (as seen in some environments)
+_blobstorage__/
+_queuestorage__/
+_tablestorage__/
+**/_blobstorage__/**
+**/_queuestorage__/**
+**/_tablestorage__/**
+
+# New Azurite database folders (double-underscore)
 __azurite_db_blob__/
 __azurite_db_queue__/
 __azurite_db_table__/
@@ -285,10 +293,24 @@ __azurite_db_table__/
 **/__azurite_db_queue__/**
 **/__azurite_db_table__/**
 
-# Azurite database files (JSON + WAL/SHM)
+# New Azurite database folders (single-underscore)
+_azurite_db_blob__/
+_azurite_db_queue__/
+_azurite_db_table__/
+**/_azurite_db_blob__/**
+**/_azurite_db_queue__/**
+**/_azurite_db_table__/**
+
+# Azurite database files (JSON + WAL/SHM + extent files)
 __azurite_db_*.json
+__azurite_db_*_extent*.json
 __azurite_db_*.json-*
 __azurite_db_*.json.*
+_azurite_db_*.json
+_azurite_db_*_extent*.json
+_azurite_db_*.json-*
+_azurite_db_*.json.*
 
-# Generic fallback
+# Generic fallbacks
 **/__azurite*
+**/_azurite*
