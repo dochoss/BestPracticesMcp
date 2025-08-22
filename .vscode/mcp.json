@@ -1,8 +1,23 @@
 {
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "function-mcp-extension-key",
+      "description": "The Azure Function MCP extension key",
+      "password": true
+    }
+  ],
   "servers": {
-    "BestPractices": {
+    "BestPractices-local": {
       "type": "sse",
       "url": "http://localhost:7071/runtime/webhooks/mcp/sse"
+    },
+    "BestPractices-Azure": {
+      "type": "sse",
+      "url": "https://az-func-poxoatisz5nre.azurewebsites.net/runtime/webhooks/mcp/sse",
+      "headers": {
+        "x-functions-key": "${input:function-mcp-extension-key}"
+      }
     }
   }
 }

@@ -1,0 +1,15 @@
+name: bestpracmcp
+
+# Azure Developer CLI configuration
+infra:
+  path: infra
+  module: main.bicep
+  parameters:
+    location: southcentralus
+    environmentName: ${AZURE_ENV_NAME}
+
+services:
+  functionapp:
+    project: .
+    language: csharp
+    host: function
